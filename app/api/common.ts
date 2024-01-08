@@ -71,10 +71,10 @@ export async function requestOpenai(req: NextRequest) {
       "Content-Type": "application/json",
       "Cache-Control": "no-store",
       [authHeaderName]: authValue,
+      "a-x-password": serverConfig.baseUrlPwd,
       ...(serverConfig.openaiOrgId && {
         "OpenAI-Organization": serverConfig.openaiOrgId,
       }),
-      "a-x-password": serverConfig.baseUrlPwd,
     },
     method: req.method,
     body: req.body,
