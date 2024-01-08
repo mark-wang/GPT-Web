@@ -73,7 +73,7 @@ export async function requestOpenai(req: NextRequest) {
       [authHeaderName]: authValue,
       ...(serverConfig.openaiOrgId && {
         "OpenAI-Organization": serverConfig.openaiOrgId,
-        "a-x-password": serverConfig.BASE_URL_PWD,
+        "a-x-password": serverConfig.baseUrlPwd,
       }),
     },
     method: req.method,
