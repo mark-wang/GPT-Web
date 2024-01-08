@@ -31,7 +31,7 @@ declare global {
       GOOGLE_API_KEY?: string;
       GOOGLE_URL?: string;
 
-      BASE_URL_PWD?: string;
+      BASE_URL_PWD: string;
     }
   }
 }
